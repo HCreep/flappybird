@@ -117,7 +117,26 @@ var deathAnimation = function(){
         playend = true;
         playdata = [mode, score];
         if(window.window.WeixinApi && window.WeixinJSBridge) {
-            alert("您在 " + ["easy", "normal", "hard"][mode] + " 模式中取得 " + score + " 分，右上角分享成绩到朋友圈吧~");
+            //alert("您在 " + ["easy", "normal", "hard"][mode] + " 模式中取得 " + score + " 分，右上角分享成绩到朋友圈吧~");
+	    var config = {
+            title: 'm-share', // 标题，默认读取document.title
+            desc: 'm-share的描述', // 描述, 默认读取head标签：<meta name="description" content="desc" />
+            link: 'http://www.dearhaoge.com/project/m-share/', // 网址，默认使用window.location.href
+            imgUrl: 'http://www.dearhaoge.com/project/m-share/shareIcon.jpg', // 图片, 默认取网页中第一个img标签
+            types: ['wx', 'wxline', 'qq', 'qzone', 'sina'], // 开启的分享图标, 默认为全部
+            infoMap: {
+                wx: {
+                    title: 'm-share微信分享',
+                    desc: '我是微信的分享',
+                    link: 'http://www.dearhaoge.com/project/m-share/?ADTAG=wx',
+                    imgUrl: 'http://www.dearhaoge.com/project/m-share/shareIcon.jpg'
+                }
+            },
+            fnDoShare: function (type) {
+                console.log(1);
+            }
+        };
+		Mshare.init(config);
         }
     }
 	ctx.drawImage(ready, width / 2 - 57, height / 2 + 10);
