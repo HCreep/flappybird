@@ -85,33 +85,5 @@ canvas {
     ga('send', 'pageview');
 
   </script> -->
-	<div class="m-share"></div>
-    <button class="shareWx">分享到微信</button>
-    <button class="shareWxline">分享到朋友圈</button>
-    <button class="shareQq">分享到qq</button>
-    <button class="shareQzone">分享到qzone</button>
-    <button class="shareSina">分享到微博</button>
-	    <script>
-        var config = {
-            title: 'm-share', // 标题，默认读取document.title
-            desc: 'm-share的描述', // 描述, 默认读取head标签：<meta name="description" content="desc" />
-            link: 'http://www.dearhaoge.com/project/m-share/', // 网址，默认使用window.location.href
-            imgUrl: 'http://www.dearhaoge.com/project/m-share/shareIcon.jpg', // 图片, 默认取网页中第一个img标签
-            types: ['wx', 'wxline', 'qq', 'qzone', 'sina'], // 开启的分享图标, 默认为全部
-            infoMap: {
-                wx: {
-                    title: 'm-share微信分享',
-                    desc: '我是微信的分享',
-                    link: 'http://www.dearhaoge.com/project/m-share/?ADTAG=wx',
-                    imgUrl: 'http://www.dearhaoge.com/project/m-share/shareIcon.jpg'
-                }
-            },
-            fnDoShare: function (type) {
-                console.log(1);
-            }
-        };
-        // 基础配置
-        Mshare.init(config);
-    </script> 
 </body>
 </html>
