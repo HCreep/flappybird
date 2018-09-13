@@ -136,7 +136,7 @@ var deathAnimation = function(){
                 console.log(1);
             }
         };
-		Mshare.init(config);
+		Mshare.popup(config);
         }
     }
 	ctx.drawImage(ready, width / 2 - 57, height / 2 + 10);
