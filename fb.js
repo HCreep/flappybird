@@ -347,7 +347,7 @@ function hidden(){
 }
 
 window.onload = function(){
-    document.addEventListener("touchend", function(e) { e.preventDefault(); }, false);
+    //document.addEventListener("touchend", function(e) { e.preventDefault(); }, false);
     mode = 0;
     score = 0;
     playdata = [0, 0];
